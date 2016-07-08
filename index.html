@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HOME BY XINYU LI</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+	</script>
+</head>
+<body>
+       <!----start-header---->
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+				  <a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+		  		<div class="menu">
+					<a class="toggleMenu" href="#"><img src="images/nav_icon.png" alt="" /> </a>
+					<ul class="nav" id="nav">
+					  <li class="current"><a href="#home" class="scroll">主页</a></li>
+					  <li><a href="#about" class="scroll">关于</a></li>
+					  <li><a href="#services" class="scroll">简介</a></li>
+					  <li><a href="#work" class="scroll">文章</a></li>
+					  <li><a href="#contact" class="scroll">联系我</a></li>								
+					 </ul>
+					<script type="text/javascript" src="js/responsive-nav.js"></script>
+					<script type="text/javascript" src="js/move-top.js"></script>
+					<script type="text/javascript" src="js/easing.js"></script>
+					<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+					</script>
+				</div>							
+	  			<div class="clearfix"> </div>
+			  </div>
+		</div>
+		<!----//End-header---->
+		<!----- start-banner---->
+			<div class="banner text-center" id="home">
+				<div class="container">
+					<div class="banner-info">
+						<a class="banner-btn" href="#"><span> </span></a>
+						<h1>李新羽</h1>
+						<p>北京邮电大学<br>2013级信息工程专业本科生 </p>
+						<a href="#" class="banner_btn">Lorem Ipsum</a>
+					 </div>
+				</div>
+		    </div>
+		    <!----- //End-banner---->
+		    <div class="main">
+		    	<div class="content_top" id="about">
+		    		<div class='container'>
+		    			<h2 class="head">关于</h2>
+		    			<p class="m_1"></p>
+		    			<div class="row top_box">
+		    				<div class="col-md-6 contentleft_grid">
+		    					<h3 class="m_2"><i class="pen"></i>starry light</h3>
+		    					<p class="m_3">曾应用arduino板子制作具有艺术效果的家具灯。它可以再有人靠近时主动点亮，人离开时自动熄灭；同时可以伴随音乐进行灯光颜色和强弱的变化。</p>
+		    					<a href="#" class="content_btn">More Info</a>
+		    				</div>
+		    				<div class="col-md-6">
+		    					<h3 class="m_2"><i class="tick"></i>智能迷宫小车</h3>
+		    					<p class="m_3">在大二小学期期间制作了可以自动走出迷宫的小车，通过这次小车的制作，学习了焊接电路，以及单片机的相关基础知识。为以后的硬件学信奠定了基础。</p>
+		    					<a href="#" class="content_btn">More Info</a>
+		    				</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    	<div class="content_middle" id="services">
+		    		<div class='container'>
+		    			<h2 class="head">简介</h2>
+		    			<p class="service_desc">本人性格热情开朗，待人友好，为人诚实谦虚。工作勤奋，认真负责，能吃苦耐劳，尽职尽责，有耐心。具有亲和力，平易近人，善于与人沟通。在大学期间学习认真，对知识的掌握情况如下：</p>
+		    			
+		    			<div class="row service_top">
+		    				<div class="col-md-4 service_grid">
+		    					<i class="icon1"></i>
+		    					<h3><a href="#">C++</a></h3>
+		    					<p>学习了C++的相关知识，虽然基础较为薄弱，但是以后会继续努力。</p>
+		    				</div>
+		    				<div class="col-md-4 service_grid">
+		    					<i class="icon2"></i>
+		    					<h3><a href="#">数字电路and模拟电路</a></h3>
+		    					<p>学习了硬件电路的基础知识，成功磨灭了我对硬件的兴趣。</p>
+		    				</div>
+		    				<div class="col-md-4 service_grid">
+		    					<i class="icon3"></i>
+		    					<h3><a href="#">Java</a></h3>
+		    					<p>认真的学习了Java相关知识，自认为掌握的还不错，以后还会继续学习。</p>
+		    				</div>
+		    			</div>
+		    			<div class="row">
+		    				<div class="col-md-4 service_grid">
+		    					<i class="icon4"></i>
+		    					<h3><a href="#">通信原理</a></h3>
+		    					<p>通信原理使我对于通信的相关原理有了初步的掌握，并未以后的工作和学习奠定了坚实的基础。</p>
+		    				</div>
+		    				<div class="col-md-4 service_grid">
+		    					<i class="icon5"></i>
+		    					<h3><a href="#">信息论</a></h3>
+		    					<p>该门课程帮助我对信源、信道的相关原理有了初步的认识，对香农印象深刻。</p>
+		    				</div>
+		    				<div class="col-md-4 service_grid">
+		    					<i class="icon6"></i>
+		    					<h3><a href="#">计算机网络</a></h3>
+		    					<p>了解了因特网的发展历史、演变过程和现状，对于网络的基本原理基本掌握。</p>
+		    				</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    	<div class="content_bottom" id="work">
+		    	  <div class="container"> 
+			       <div class="Articles_top">
+					 <h3 class="m_5">文章</h3>
+					 <ul id="filters" class="clearfix">
+						<li><span class="filter active" data-filter="app card icon logo web">All Articles</span></li>
+						<li><span class="filter" data-filter="app">For Studying</span></li>
+						<li><span class="filter" data-filter="card">For Relaxing</span></li>
+					 </ul>
+				     <div class="clear"></div>
+			       </div>
+				   <div id="portfoliolist">
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+						  <a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+						     <img src="images/p1.jpg" class="img-responsive" alt=""/>
+						  </a>
+						</div>
+						<a href="single.html"><div class="links">
+						  <h4>如何制作个人网站</h4><p class="img"><img src="images/likes.png" title="likes" alt="">12</p><div class="clearfix"></div>
+						   <ul>
+				  			  <li><span>July 8, 2016</span></li>
+				  		   </ul>
+		  			    </div></a>
+					</div>				
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+						       <img src="images/p2.jpg" class="img-responsive" alt=""/>
+						    </a>
+		                </div>
+		                <a href="single.html"><div class="links">
+						  <h4>如何制作个人网站2</h4><p class="img"><img src="images/likes.png" title="likes" alt="">12</p><div class="clearfix"></div>
+						   <ul>
+				  			  <li><span>July 8, 2016</span></li>
+				  		   </ul>
+		  			    </div></a>
+					</div>		
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+						       <img src="images/p3.jpg" class="img-responsive" alt=""/>
+						    </a>
+		                </div>
+		                <a href="single.html"><div class="links">
+						  <h4>如何制作个人网站3</h4><p class="img"><img src="images/likes.png" title="likes" alt="">12</p><div class="clearfix"></div>
+						   <ul>
+				  			  <li><span>July 8, 2016</span></li>
+				  		   </ul>
+		  			    </div></a>
+					</div>				
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+						       <img src="images/p4.jpg" class="img-responsive" alt=""/>
+						    </a>
+		                </div>
+		                <a href="single.html"><div class="links">
+						  <h4>如何制作个人网站4</h4><p class="img"><img src="images/likes.png" title="likes" alt="">12</p><div class="clearfix"></div>
+						   <ul>
+				  			  <li><span>July 8, 2016</span></li>
+				  		   </ul>
+		  			    </div></a>
+					</div>	
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+						       <img src="images/p5.jpg" class="img-responsive" alt=""/>
+						    </a>
+		                </div>
+		                <a href="single.html"><div class="links">
+						  <h4>如何制作个人网站5</h4><p class="img"><img src="images/likes.png" title="likes" alt="">12</p><div class="clearfix"></div>
+						   <ul>
+				  			  <li><span>July 8, 2016</span></li>
+				  		   </ul>
+		  			    </div></a>
+					</div>			
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+						       <img src="images/p6.jpg" class="img-responsive" alt=""/>
+						    </a>
+		                </div>
+		                <a href="single.html"><div class="links">
+						  <h4>如何制作个人网站6</h4><p class="img"><img src="images/likes.png" title="likes" alt="">12</p><div class="clearfix"></div>
+						   <ul>
+				  			  <li><span>July 8, 2016</span></li>
+				  		   </ul>
+		  			    </div></a>
+					</div>	
+				</div>
+		       </div>
+		      </div>
+		      <div class="contact" id="contact">
+		      	<div class="container">
+		      		<div class="row">
+		      			<div class="col-md-9">
+		      			  <div class="contact-form">
+				  	        <form method="post" action="contact-post.html">
+					    	    <p class="comment-form-author"><label for="author">名字:</label>
+					    	    	<input type="text" class="textbox" value="Enter your name here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your name here...';}">
+						    	</p>
+						        <p class="comment-form-author"><label for="author">邮箱:</label>
+						     	   <input type="text" class="textbox" value="Enter your email here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+						        </p>
+						        <p class="comment-form-author"><label for="author">留言:</label>
+						    	  <textarea value="Enter your message here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Enter your message here...</textarea>
+						        </p>
+						        <input name="submit" type="submit" id="submit" value="提交">
+					        </form>
+				          </div>
+				        </div>
+		      			<div class="col-md-3 contact_right">
+		      				<h4>地址</h4>
+		      				<p class="contact_address">北京市海淀区西土城路10号,<br>北京邮电大学</p>
+		      				<p class="contact_address1">电话: 13269621916<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		      			</div>
+		      		</div>
+		      	</div>
+		      </div>
+		    </div>
+		    <div class="footer">
+		    	<div class="container">
+		    		<div class="copy">
+		              <p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://www.freemoban.com/">www.freemoban.com</a></p>
+		            </div>
+		    	</div>
+		    	<script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+		    </div>
+
+</body>
+</html>		
